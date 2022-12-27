@@ -1,1 +1,1 @@
-#Image Generator using Unsplash API
+# Image Generator using Unsplash API
