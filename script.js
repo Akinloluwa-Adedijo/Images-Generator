@@ -2,9 +2,12 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const page_max = 14;
+
+//API Access key
 const client_id = process.env.CLIENT_ID;
 let requestURL = `https://api.unsplash.com/photos/random/?client_id=${client_id}&count=${page_max}`;
 
+//selecting image container and 
 const getImagesButton = document.querySelector(".getImagesButton");
 const imagesContainer = document.querySelector(".image-container");
 
@@ -27,6 +30,7 @@ async function getImagesdata() {
       });
     })
     .catch(function (error) {
+      //Appending an error image for when an error occurs 
       let imageToAdd = document.createElement("img");
       let textError = document.createElement("h2");
       imageToAdd.src =
