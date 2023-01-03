@@ -36,18 +36,18 @@ button:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .image-container > img {
   width: 300px;
   padding: 10px 10px 10px 10px;
   opacity: 0.5;
-  transition: all 3.5s;
+  transition: all 3s;
 }
 
 .image-container > img:hover {
-  flex-grow: 3.5;
+  flex-grow: 2;
   opacity: 1;
 }
 
