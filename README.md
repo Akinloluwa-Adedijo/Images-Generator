@@ -1,1 +1,2 @@
-# Image Generator using Unsplash API
+# Image Generator
+A random image generator using the Unsplash Api.
