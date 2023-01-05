@@ -23,6 +23,7 @@ h1 {
   min-width: 250px;
   min-height: 50px;
   border-radius: 10px;
+  outline: none;
 }
 
 .getImagesButton:hover {
@@ -61,10 +62,11 @@ input {
   color: #f8c296;
   background-color: #1d1f20;
   width: 500px;
-  height: 35px;
+  height: 50px;
   border: 1px solid #f8c296;
   border-radius: 10px;
   margin: 10px;
+  font-size: 1.25rem;
 }
 
 input::placeholder {
@@ -73,4 +75,14 @@ input::placeholder {
 
 input[type="text"]:focus {
   outline: none;
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 250px;
+    font-size: 80%;
+  }
+}
+.inputContaioner {
+  align-items: center;
 }
