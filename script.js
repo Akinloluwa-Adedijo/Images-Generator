@@ -9,6 +9,7 @@ let searchURL;
 
 const getImagesButton = document.querySelector(".getImagesButton");
 const imagesContainer = document.querySelector(".image-container");
+const clearImagesButton = document.querySelector(".clearImagesButton");
 
 const onEnter = document.querySelector("input");
 const textInputValue = document.querySelector("#search");
@@ -64,7 +65,7 @@ async function getSearchImages() {
         imageToAdd.alt = imageAlt;
         imagesContainer.appendChild(imageToAdd);
       });
-      console.log(jsonData);
+      // console.log(jsonData);
     })
     .catch((error) => {
       let imageToAdd = document.createElement("img");
@@ -78,3 +79,10 @@ async function getSearchImages() {
       // console.log("Error + " + error);
     });
 }
+
+//function to clear all images in the field
+clearImagesButton.addEventListener("click", () => {
+  while (imagesContainer.firstChild && imagesContainer.children.length !== 0) {
+    imagesContainer.removeChild(imagesContainer.firstChild);
+  }
+});
